@@ -1,29 +1,29 @@
-## Chapter 1: Introduction to the x86 architecture and about our OS
+## Bab 1: Mengenal arsitektur x86 dan OS kita
 
-### What is the x86 architecture?
+### Apa itu arsitektur x86?
 
-> The term x86 denotes a family of backward compatible instruction set architectures based on the Intel 8086 CPU.
+> Istilah x86 merujuk pada sebuah keluarga set instruksi arsitektur yang *backward compatible* yang berbasis pada Intel 8086 CPU.
 
-The x86 architecture is the most common instruction set architecture since its introduction in 1981 for the IBM PC. A large amount of software, including operating systems (OS's) such as DOS, Windows, Linux, BSD, Solaris and Mac OS X, function with x86-based hardware.
+Arsitektur x86 merupakan set instruksi arsitektur yang paling umum digunakan sejak dikenalkan pada tahun 1981 untuk IBM PC. Banyak software, termasuk sistem operasi (OS) seperti DOS, Windows, Linux, BSD, Solaris, dan Mac OS X, bekerja menggunakan hardware berbasis x86.
 
-In this course we are not going to design an operating system for the x86-64 architecture but for x86-32, thanks to backward compatibility, our OS will be compatible with our newer PCs (but take caution if you want to test it on your real machine).
+Dalam materi ini, Kita akan mendesain sebuah sistem operasi untuk arsitektur x86-32 bukan x86-64. Berkat *backward compatibility*, sistem operasi yang kita buat akan tetap *compatible* dengan PC yang lebih baru (namun Anda perlu berhati-hati jika ingin menjalankannya di mesin komputer Anda secara langsung).
 
-### Our Operating System
+### Sistem Operasi yang akan kita buat
 
-The goal is to build a very simple UNIX-based operating system in C++, but the goal is not to just build a "proof-of-concept". The OS should be able to boot, start a userland shell and be extensible.
+Tujuan dari materi ini adalah untuk membangun sebuah sistem operasi sederhana sungguhan yang berbasiskan UNIX dengan menggunakan bahasa pemrograman C++, bukan hanya sekedar sebagai *"proof-of-concept"*. Sistem operasi harus dapat melakukan booting, memulai sebuah shell untuk user, dan juga harus *extensible*.
 
-The OS will be built for the x86 architecture, running on 32 bits, and compatible with IBM PCs.
+Sistem Operasi akan dikembangkan untuk arsitektur x86, yang berjalan pada prosesor 32 bit, dan *compatible* dengan IBM PC.
 
-**Specifications:**
+**Spesifikasi:**
 
-* Code in C++
-* x86, 32 bit architecture
-* Boot with Grub
-* Kind of modular system for drivers
-* Kind of UNIX style
+* Kode dalam bahasa pemrograman C++
+* Arsitektur x86, 32 bit
+* Boot menggunakan Grub
+* Untuk driver, menggunakan sistem seperti sistem modular
+* Memiliki gaya seperti *UNIX style*
 * Multitasking
-* ELF executable in userland
-* Modules (accessible in userland using /dev/...) :
+* ELF executable di *userland* (lingkungan di mana user berinteraksi dengan sistem)
+* Module (dapat diakses di *userland* melalui `/dev/...`) :
     * IDE disks
     * DOS partitions
     * Clock
@@ -32,4 +32,4 @@ The OS will be built for the x86 architecture, running on 32 bits, and compatibl
 * Userland :
     * API Posix
     * LibC
-    * "Can" run a shell or some executables (e.g., lua)
+    * "Dapat" menjalankan sebuah shell atau beberapa program *executable* lainnya (seperti lua)

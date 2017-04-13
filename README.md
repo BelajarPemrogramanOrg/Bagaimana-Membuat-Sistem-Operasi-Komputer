@@ -25,7 +25,7 @@ Silahkan dan mohon untuk dapat membantu berkontribusi dalam usaha menyebar luask
 
 #### Perkembangan
 
-- [ ] Bab 1
+- [x] Bab 1
 - [ ] Bab 2
 - [ ] Bab 3
 - [ ] Bab 4
